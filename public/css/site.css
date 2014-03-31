@@ -1,0 +1,35 @@
+body, h1, h2, h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body {
+  background-color: #C19E37;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+.top-bar {
+  background-color: transparent;
+}
+
+.top-bar .name h1 a {
+  font-size: 1.4em;
+}
+
+.such-hero {
+  padding-top: 140px;
+  padding-bottom: 200px;
+}
+
+.such-security {
+  background-color: white;
+  color: #444;
+  padding-bottom: 80px;
+}
+
+.such-security h2 {
+  color: #444;
+}
