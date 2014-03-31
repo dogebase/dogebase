@@ -11,6 +11,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/js/foundation.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mediaelement/2.13.2/js/mediaelement.min.js"></script>
   </head>
   <body>
     <div class="row">
@@ -78,6 +79,18 @@
     </div>
     <script>
       $(document).foundation()
+      var oopses = [
+        'Oops!',
+        'Such error',
+        'So bad link',
+        'Much 404'
+      ]
+      $(document).on('click', 'a:not(.oops)', function() {
+        var $el = $(this)
+        $el.addClass('oops')
+        var index = Math.floor(Math.random() * oopses.length)
+        $el.text(oopses[index])
+      })
     </script>
   </body>
 </html>

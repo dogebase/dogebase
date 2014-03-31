@@ -16,6 +16,11 @@ h1 {
   color: white;
 }
 
+.oops {
+  color: #E82513 !important;
+  transition:color 0.3s;
+}
+
 .top-bar {
   background-color: transparent;
 }
