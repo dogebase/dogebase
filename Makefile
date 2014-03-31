@@ -3,6 +3,7 @@ GITHUB_REPO = git@github.com:dogebase/dogebase
 
 # Publishes the gh-pages repo
 deploy: build
+	cp -r public/* build && \
 	cd build && \
 	git init . && \
 	git add . && \
