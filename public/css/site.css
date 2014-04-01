@@ -83,7 +83,12 @@ h1 {
 }
 
 .coin {
+  position: absolute;
   pointer-events: none;
+  width: 25px;
+  height: 25px;
+  top: -50px;
+  left: -50px;
 }
 
 .such-showoff {
