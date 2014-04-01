@@ -53,8 +53,18 @@ h1 {
 }
 
 .such-hero {
+  position: relative;
   padding-top: 140px;
   padding-bottom: 200px;
+}
+
+.such-hero img {
+  position: absolute;
+  width: 75%;
+  max-width: 600px;
+  bottom: -100px;
+  right: -100px;
+  z-index: -1;
 }
 
 .such-security {
@@ -66,4 +76,8 @@ h1 {
 
 .such-security h2 {
   color: #444;
+}
+
+.coin {
+  pointer-events: none;
 }

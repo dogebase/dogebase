@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/css/normalize.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.1/css/foundation.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
     <link rel="stylesheet" href="css/site.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
@@ -40,11 +41,11 @@
     <div class="row">
       <div class="small-12 columns">
         <div class="such-hero">
+          <img src="/img/doge.png">
           <div class="row">
             <div class="small-12 columns">
               <h1>Dogecoin, such safe much easy</h1>
               <p>Dogecoin so international digital wallet. Securely buy! Nice use! No concern!</p>
-
             </div>
           </div>
           <div class="row">
@@ -64,15 +65,15 @@
     <div class="such-security">
       <div class="row">
         <div class="small-12 medium-4 columns small-only-text-center">
-          <h2>Bank Level Security?</h2>
-          <p>Such measures ensure website and customer dogecoin much secure. Learn More</p>
+          <h2><i class="fi-lock"></i> Bank Level Security?</h2>
+          <p>Such measures ensure website and customer dogecoin much secure. <a href="#">Learn More</a></p>
         </div>
         <div class="small-12 medium-4 columns small-only-text-center">
-          <h2>Offline Backups?</h2>
+          <h2><i class="fi-no-dogs"></i> Offline Backups?</h2>
           <p>Much up to 97% of customer funds stored offline bank vault. Such prevent theft. So little loss.</p>
         </div>
         <div class="small-12 medium-4 columns small-only-text-center">
-          <h2>Fully Encrypted?</h2>
+          <h2><i class="fi-key"></i> Fully Encrypted?</h2>
           <p>Wallet stored using encryption and site runs entirely over hypertext.</p>
         </div>
       </div>
@@ -85,12 +86,16 @@
         'So bad link',
         'Much 404'
       ]
-      $(document).on('click', 'a:not(.oops)', function() {
+      $(document).on('click', 'a', function(e) {
+        e.preventDefault()
         var $el = $(this)
-        $el.addClass('oops')
-        var index = Math.floor(Math.random() * oopses.length)
-        $el.text(oopses[index])
+        if (!$el.hasClass('oops')) {
+          $el.addClass('oops')
+          var index = Math.floor(Math.random() * oopses.length)
+          $el.text(oopses[index])
+        }
       })
     </script>
+    <script src="/js/coin.js"></script>
   </body>
 </html>
